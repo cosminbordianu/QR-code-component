@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playwrite+CO+Guides&display=swap");
+
+:root {
+  --color-background: hsl(212, 45%, 89%);
+  --color-card-background: hsl(0, 0%, 100%);
+  --color-card-title: hsl(218, 44%, 22%);
+  --color-card-paragraph: hsl(216, 15%, 48%);
+  --font-primary: Outfit, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes items to top and bottom */
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.qr-card img {
+  width: 20rem;
+  border-radius: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.qr-card {
+  background-color: var(--color-card-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  border-radius: 1.6rem;
+  padding: 1.6rem 0;
+}
+
+.qr-card h2,
+.qr-card p {
+  text-align: center;
+  margin: 0.4rem 0;
+  padding: 0 2.9rem;
+}
+
+.qr-card h2 {
+  color: var(--color-card-title);
+  font-size: 1.5rem;
+}
+
+.qr-card p {
+  color: var(--color-card-paragraph);
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
