@@ -12,18 +12,20 @@
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+html {
   font-size: 15px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   font-family: var(--font-primary);
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Pushes items to top and bottom */
   align-items: center;
 }
 
@@ -34,9 +36,9 @@ body {
 }
 
 .qr-card img {
-  width: 20rem;
-  border-radius: 1rem;
-  margin-bottom: 0.4rem;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 .qr-card {
@@ -45,15 +47,14 @@ body {
   flex-direction: column;
   align-items: center;
   width: 350px;
-  border-radius: 1.6rem;
-  padding: 1.6rem 0;
+  border-radius: 1.5rem;
 }
 
 .qr-card h2,
 .qr-card p {
   text-align: center;
-  margin: 0.4rem 0;
-  padding: 0 2.9rem;
+  padding: 0 3rem;
+  margin: 0 0 1rem 0;
 }
 
 .qr-card h2 {
@@ -63,11 +64,17 @@ body {
 
 .qr-card p {
   color: var(--color-card-paragraph);
+  margin-bottom: 3rem;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  transition: color 0.3s ease;
+}
+
+.attribution a:is(:hover, :focus-within) {
+  color: hsl(0, 92%, 20%);
 }
